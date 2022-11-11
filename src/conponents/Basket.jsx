@@ -1,11 +1,12 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { remove } from '../redux/action/basketActions'
 
 const Basket = ({produc}) => {
     const state = useSelector((state)=>state)
 const dispatch = useDispatch()
     const removeClick=()=>{
-        dispatch({type:"REMOVE",payload:produc})
+        dispatch(remove(produc))
     }
   return (
     <div>

@@ -1,4 +1,5 @@
-import {ADD,REMOVE} from "./type/baskettype"
+import { ADD, REMOVE } from "../type/basketype"
+
 export const add = (payload) => {
   return {type:ADD,payload:payload}
 }
