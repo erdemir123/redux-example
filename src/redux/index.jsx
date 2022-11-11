@@ -1,14 +1,10 @@
-const initialState =[]
+import {legacy_createStore} from "redux"
+import reducer from "./reducer/basketReducer"
 
-const reducer = (state=initialState , {type,payload}) => {
-  switch (type) {
-  case "ADD":
-    return [...state.filter((item)=>item.id!==payload.id),payload]
-  case "REMOVE":
-    return [...state.filter((item)=>item.id!==payload.id)]
+export const store = legacy_createStore(reducer)
 
-  default:
-    return state
-  }
-}
-export default reducer
+
+
+
+
+
