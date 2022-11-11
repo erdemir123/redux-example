@@ -3,9 +3,9 @@ const initialState =[]
 const reducer = (state=initialState , {type,payload}) => {
   switch (type) {
   case "ADD":
-    return [...state,payload]
+    return [...state.filter((item)=>item.id!==payload.id),payload]
   case "REMOVE":
-    return alert("sadık")
+    return [...state.filter((item)=>item.id!==payload.id)]
 
   default:
     return state

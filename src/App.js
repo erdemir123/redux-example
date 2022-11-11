@@ -15,6 +15,7 @@ function App() {
     <>
     <Provider store={store}>
     <Header />
+    <div className="h-12"></div>
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/card" element={<Card />}/>
